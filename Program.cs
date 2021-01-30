@@ -51,6 +51,13 @@ namespace exemplo_dotnet
 						decimal notaTotal = 0;
 						int nrAlunos = 0;
 
+						if (string.IsNullOrEmpty(alunos[0].Nome))
+						{
+							Console.WriteLine("Nenhum aluno cadastrado");
+							Console.WriteLine();
+							break;
+						}
+
 						for (int i = 0; i < alunos.Length; i++)
 						{
 							if (!string.IsNullOrEmpty(alunos[i].Nome))
